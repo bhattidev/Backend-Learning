@@ -1,0 +1,38 @@
+<%- include('./partials/header.ejs') %>
+
+<div class="container-fluid bg-dark text-white">
+  <div class="row">
+    <!-- Sidebar -->
+    <div class="col-sm-2">
+      <%- include('./partials/sidebar.ejs', { page_name: 'portfolio' }) %>
+    </div>
+    <!-- Main Content -->
+    <div class="col-sm-10 px-5 mt-5">
+      <h1 class="text-warning">My Portfolio</h1>
+      <div class="row mt-4">
+        <!-- Project 1 -->
+        <div class="col-md-4 mb-3">
+          <div class="card bg-dark text-white shadow-lg">
+            <img src="/images/project1.jpg" class="card-img-top" alt="Project 1">
+            <div class="card-body">
+              <h5 class="card-title text-info">E-commerce Website</h5>
+              <p class="card-text">Built a responsive e-commerce platform with HTML, CSS, and JavaScript.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Project 2 -->
+        <div class="col-md-4 mb-3">
+          <div class="card bg-dark text-white shadow-lg">
+            <img src="/images/project2.jpg" class="card-img-top" alt="Project 2">
+            <div class="card-body">
+              <h5 class="card-title text-info">Restaurant Website</h5>
+              <p class="card-text">Developed a modern restaurant website using React.js and Tailwind CSS.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include('./partials/footer.ejs') %>

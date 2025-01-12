@@ -1,5 +1,34 @@
+html,
+body {
+	height: 100%;
+}
+.container-fluid {
+	min-height: 100%;
+}
+.i-color {
+	color: chartreuse;
+}
+.ss-color {
+	color: silver;
+}
+
 .font-st {
 	font-family: 'Satisfy', serif;
 	font-weight: 400;
 	font-style: normal;
+}
+.nav-link {
+	color: white;
+}
+a.nav-link.active {
+	color: black;
+	font-weight: bold;
+	background-color: #ffc107; /* Example highlight color */
+}
+a.nav-link:hover {
+	color: black;
+	background-color: #e9cd79;
+}
+a .nav-link {
+	color: whitesmoke;
 }

@@ -1,4 +1,51 @@
 <%- include('./partials/header.ejs') %>
 
-<h1>Services</h1>
+<div class="container-fluid bg-dark text-white">
+  <div class="row">
+    <!-- Sidebar -->
+    <div class="col-sm-2">
+      <%- include('./partials/sidebar.ejs', { page_name: 'services' }) %>
+    </div>
+    <!-- Main Content -->
+    <div class="col-sm-10 px-5 mt-5">
+      <h1 class="text-info">My Services</h1>
+      <div class="row mt-4">
+        <!-- Service 1 -->
+        <div class="col-md-4 mb-3">
+          <div class="card bg-dark text-white shadow-lg">
+            <div class="card-body">
+              <h5 class="card-title text-warning">Responsive Web Design</h5>
+              <p class="card-text">
+                Creating mobile-first, fully responsive websites that look stunning on all devices.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Service 2 -->
+        <div class="col-md-4 mb-3">
+          <div class="card bg-dark text-white shadow-lg">
+            <div class="card-body">
+              <h5 class="card-title text-warning">Frontend Development</h5>
+              <p class="card-text">
+                Using modern tools like React.js and Tailwind CSS to create functional user interfaces.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Service 3 -->
+        <div class="col-md-4 mb-3">
+          <div class="card bg-dark text-white shadow-lg">
+            <div class="card-body">
+              <h5 class="card-title text-warning">Custom Web Solutions</h5>
+              <p class="card-text">
+                Tailoring web solutions to meet your specific needs and business goals.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <%- include('./partials/footer.ejs') %>
