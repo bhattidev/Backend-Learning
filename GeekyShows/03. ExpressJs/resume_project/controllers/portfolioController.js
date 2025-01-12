@@ -1,5 +1,5 @@
 const portfolioController = (req, res) => {
-	res.render('about.ejs', { title: 'Portfolio' });
+	res.render('portfolio.ejs', { title: 'Portfolio' });
 };
 
 export default portfolioController;
