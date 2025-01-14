@@ -4,7 +4,7 @@ const app = express();
 const port = process.env.PORT || '3000';
 
 //set template engine
-app.set('view egine', 'ejs');
+app.set('view engine', 'ejs');
 
 //static files
 app.use(express.static('public'));

@@ -1,0 +1,34 @@
+body {
+	background-color: rgb(155, 151, 151);
+	padding: 0;
+	margin: 0;
+}
+
+header {
+	display: flex;
+	align-items: center;
+	background-color: rgb(102, 101, 101);
+	padding: 0 2%;
+}
+
+header ul {
+	list-style-type: none;
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+header ul a {
+	color: black;
+}
+
+header ul select {
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+header ul select:focus {
+	outline: none;
+}
+h1 {
+	padding-left: 2%;
+}
