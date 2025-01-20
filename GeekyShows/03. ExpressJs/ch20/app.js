@@ -1,9 +1,9 @@
 import express from 'express';
 import connectDB from './db/connectdb.js';
 const app = express();
+import { getAllDoc } from './models/students.js';
 const port = process.env.PORT || '3000';
-const DATABASE_URL =
-	process.env.DATABASE_URL || 'mongodb://localhost:27017/schooldb';
+const DATABASE_URL = process.env.DATABASE_URL || 'mongodb://localhost:27017';
 
 // Load Routes
 
@@ -11,6 +11,7 @@ const DATABASE_URL =
 
 connectDB(DATABASE_URL);
 
+getAllDoc();
 // Create and Save Document
 
 app.listen(port, () => {

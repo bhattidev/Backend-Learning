@@ -22,3 +22,12 @@ const studentSchema = new mongoose.Schema({
 
 // Compiling Schema
 const studentModel = mongoose.model('student', studentSchema);
+
+// Retrive All Document
+
+const getAllDoc = async () => {
+	const result = await studentModel.find();
+	console.log(result);
+};
+
+export { getAllDoc };
