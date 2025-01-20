@@ -9,8 +9,6 @@ const DATABASE_URL =
 
 // Load Routes
 
-// app.use();
-
 // database
 
 connectDB(DATABASE_URL);
