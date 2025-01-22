@@ -1,0 +1,62 @@
+<%- include( './partial/header.ejs' ) %>
+
+<div class="container">
+	<div class="row">
+		<div class="col-sm-6 mt-5">
+			<h2 class="alert alert-success text-center">Update Student</h2>
+			<form action="post">
+				<div class="mb-3">
+					<label
+						for="name"
+						class="form-label"
+						>Name</label
+					>
+					<input
+						for="name"
+						type="text"
+						class="form-control"
+						id="name"
+						name="name" />
+				</div>
+				<div class="mb-3">
+					<label
+						for="age"
+						class="form-label"
+						>Age</label
+					>
+					<input
+						for="age"
+						type="text"
+						class="form-control"
+						id="age"
+						name="age" />
+				</div>
+				<div class="mb-3">
+					<label
+						for="fees"
+						class="form-label"
+						>Fees</label
+					>
+					<input
+						for="fees"
+						type="text"
+						class="form-control"
+						id="fees"
+						name="fees" />
+				</div>
+				<button
+					type="submit"
+					class="btn btn-warning">
+					Update
+				</button>
+				<button
+					type="submit"
+					class="btn btn-secondary">
+					Back to Home
+				</button>
+			</form>
+		</div>
+	</div>
+</div>
+
+<%- include( './partial/footer.ejs' ) %>
