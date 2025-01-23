@@ -1,60 +1,28 @@
-<%- include( './partial/header.ejs' ) %>
+<%- include('./partial/header.ejs') %>
 
 <div class="container">
 	<div class="row">
 		<div class="col-sm-6 mt-5">
 			<h2 class="alert alert-success text-center">Add New Student</h2>
-			<form action="post">
+			<form action="/student/create" method="post">
 				<div class="mb-3">
-					<label
-						for="name"
-						class="form-label"
-						>Name</label
-					>
-					<input
-						for="name"
-						type="text"
-						class="form-control"
-						id="name"
-						name="name" />
+					<label for="name" class="form-label">Name</label>
+					<input type="text" class="form-control" id="name" name="name" />
 				</div>
 				<div class="mb-3">
-					<label
-						for="age"
-						class="form-label"
-						>Age</label
-					>
-					<input
-						for="age"
-						type="text"
-						class="form-control"
-						id="age"
-						name="age" />
+					<label for="age" class="form-label">Age</label>
+					<input type="number" class="form-control" id="age" name="age" />
 				</div>
 				<div class="mb-3">
-					<label
-						for="fees"
-						class="form-label"
-						>Fees</label
-					>
-					<input
-						for="fees"
-						type="text"
-						class="form-control"
-						id="fees"
-						name="fees" />
+					<label for="fees" class="form-label">Fees</label>
+					<input type="number" class="form-control" id="fees" name="fees" />
 				</div>
-				<button
-					type="submit"
-					class="btn btn-primary">
-					Submit
-				</button>
+				<button type="submit" class="btn btn-primary">Submit</button>
 			</form>
 		</div>
 
 		<div class="col-sm-6 mt-5">
-			<h2 class="alert alert-danger text-center">List of Student Student</h2>
-			<%# Show All Data %>
+			<h2 class="alert alert-danger text-center">List of Students</h2>
 			<table class="table table-striped table-hover">
 				<thead>
 					<tr>
@@ -66,23 +34,33 @@
 					</tr>
 				</thead>
 				<tbody>
-					<% data.forEach((item, index)=>{ %> 
+					<% data.forEach((item, index) => { %>
 						<tr>
-						<td><%= index+1 %>  </td>
-						<td> <%= item.name %>  </td>
-						<td><%= item.age %>  </td>
-						<td><%= item.fees %>  </td>
-						<td>
-							<i class="fas fa-pen-square text-info"></i>
-							<i class="fas fa-trash text-danger"></i>
-						</td>
-					</tr>
-						<% })  %>
-					
+							<td><%= index + 1 %></td>
+							<td><%= item.name %></td>
+							<td><%= item.age %></td>
+							<td><%= item.fees %></td>
+							<td>
+								<form action="/student/edit/<%= item._id %>" method="get" class="d-inline">
+									<button type="submit" class="btn">
+										<i class="fas fa-pen-square text-info"></i>
+									</button>
+								</form>
+								<form action="/student/delete/<%= item._id %>" method="post" class="d-inline">
+									<button
+										type="submit"
+										class="btn"
+										onclick="return confirm('Are you sure you want to delete this student?');">
+										<i class="fas fa-trash text-danger"></i>
+									</button>
+								</form>
+							</td>
+						</tr>
+					<% }); %>
 				</tbody>
 			</table>
 		</div>
 	</div>
 </div>
 
-<%- include( './partial/footer.ejs' ) %>
+<%- include('./partial/footer.ejs') %>

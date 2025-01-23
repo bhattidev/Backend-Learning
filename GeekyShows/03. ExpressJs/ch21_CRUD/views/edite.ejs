@@ -1,10 +1,13 @@
-<%- include( './partial/header.ejs' ) %>
+<%- include('./partial/header.ejs') %>
 
 <div class="container">
-	<div class="row">
-		<div class="col-sm-6 mt-5">
+	<div class="row justify-content-center">
+		<div class="col-md-6 mt-5">
 			<h2 class="alert alert-success text-center">Update Student</h2>
-			<form action="post">
+			<form
+				action="/student/update/<%= data._id %>"
+				method="post"
+				class="shadow p-4 bg-white rounded">
 				<div class="mb-3">
 					<label
 						for="name"
@@ -12,11 +15,12 @@
 						>Name</label
 					>
 					<input
-						for="name"
 						type="text"
 						class="form-control"
 						id="name"
-						name="name" />
+						name="name"
+						value="<%= data.name %>"
+						required />
 				</div>
 				<div class="mb-3">
 					<label
@@ -25,11 +29,14 @@
 						>Age</label
 					>
 					<input
-						for="age"
-						type="text"
+						type="number"
 						class="form-control"
 						id="age"
-						name="age" />
+						name="age"
+						value="<%= data.age %>"
+						min="18"
+						max="60"
+						required />
 				</div>
 				<div class="mb-3">
 					<label
@@ -38,25 +45,30 @@
 						>Fees</label
 					>
 					<input
-						for="fees"
-						type="text"
+						type="number"
 						class="form-control"
 						id="fees"
-						name="fees" />
+						name="fees"
+						value="<%= data.fees %>"
+						step="0.01"
+						min="5000"
+						required />
 				</div>
-				<button
-					type="submit"
-					class="btn btn-warning">
-					Update
-				</button>
-				<button
-					type="submit"
-					class="btn btn-secondary">
-					Back to Home
-				</button>
+				<div class="d-flex justify-content-between">
+					<button
+						type="submit"
+						class="btn btn-warning">
+						Update
+					</button>
+					<a
+						href="/student"
+						class="btn btn-secondary"
+						>Back to Home</a
+					>
+				</div>
 			</form>
 		</div>
 	</div>
 </div>
 
-<%- include( './partial/footer.ejs' ) %>
+<%- include('./partial/footer.ejs') %>

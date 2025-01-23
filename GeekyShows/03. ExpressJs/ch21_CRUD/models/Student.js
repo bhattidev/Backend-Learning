@@ -1,5 +1,4 @@
 import mongoose from 'mongoose';
-import { type } from 'os';
 
 // Defining Schema
 const studentSchema = new mongoose.Schema({
@@ -7,8 +6,11 @@ const studentSchema = new mongoose.Schema({
 	age: { type: Number, required: true, min: 18, max: 60 },
 	fees: {
 		type: mongoose.Decimal128,
-		require: true,
-		validate: (value) => value >= 5000,
+		required: true,
+		validate: {
+			validator: (value) => value >= 5000,
+			message: 'Fees must be at least 5000',
+		},
 	},
 });
 
