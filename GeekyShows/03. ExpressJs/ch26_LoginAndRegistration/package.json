@@ -1,0 +1,25 @@
+{
+	"name": "ch26_loginandregistration",
+	"version": "1.0.0",
+	"main": "app.js",
+	"scripts": {
+		"dev": "nodemon app"
+	},
+	"keywords": [],
+	"type": "module",
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"devDependencies": {
+		"nodemo": "^1.0.0",
+		"nodemon": "^3.1.9"
+	},
+	"dependencies": {
+		"connect-mongo": "^5.1.0",
+		"cookie-parser": "^1.4.7",
+		"ejs": "^3.1.10",
+		"express": "^4.21.2",
+		"express-session": "^1.18.1",
+		"mongoose": "^8.9.5"
+	}
+}
