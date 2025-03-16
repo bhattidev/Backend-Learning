@@ -6,6 +6,8 @@ app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
 
+app.set('view engine', 'ejs');
+
 app.get('/', (req, res) => {
     res.json({ name: 'John Doe', age: 25 });
 }); 
@@ -14,6 +16,6 @@ app.get('/about', (req, res) => {
     res.redirect('/user');
 });
 app.get('/user', (req, res) => {
-    res.send('User page');
+    res.render('user');
 });
 
