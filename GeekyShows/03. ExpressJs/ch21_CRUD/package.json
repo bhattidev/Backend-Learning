@@ -1,0 +1,21 @@
+{
+	"name": "ch21_crud",
+	"version": "1.0.0",
+	"main": "app.js",
+	"scripts": {
+		"dev": "nodemon app"
+	},
+	"type": "module",
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"dependencies": {
+		"ejs": "^3.1.10",
+		"express": "^4.21.2",
+		"mongoose": "^8.9.5"
+	},
+	"devDependencies": {
+		"nodemon": "^3.1.9"
+	}
+}

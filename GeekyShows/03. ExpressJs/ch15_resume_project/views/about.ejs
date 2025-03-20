@@ -1,0 +1,36 @@
+<%- include('./partials/header.ejs') %>
+
+<div class="container-fluid bg-dark text-white">
+  <div class="row">
+    <!-- Sidebar -->
+    <div class="col-sm-2 sidebar">
+      <%- include('./partials/sidebar.ejs', { page_name: 'about' }) %>
+    </div>
+    <!-- Main Content -->
+    <div class="col-sm-10">
+      <div class="px-5 mt-5">
+        <h1 class="text-warning">About Me</h1>
+        <p class="mt-4" style="line-height: 1.8rem;">
+          Hello! I'm <span class="text-info">Muhammad Imran</span>, a Frontend Developer with over 1 year of experience in designing and developing modern, responsive websites. 
+          I have a passion for crafting clean and functional user interfaces using <b>HTML</b>, <b>CSS</b>, <b>JavaScript</b>, <b>React.js</b>, and <b>Tailwind CSS</b>.
+        </p>
+        <h3 class="mt-4 text-success">My Mission</h3>
+        <p>
+          To deliver innovative and user-centric web solutions that meet the unique needs of businesses and individuals.
+        </p>
+        <h3 class="mt-4 text-success">Hobbies & Interests</h3>
+        <ul>
+          <li>Learning new programming technologies</li>
+          <li>Contributing to open-source projects</li>
+          <li>Reading tech blogs and exploring innovative solutions</li>
+        </ul>
+        <h3 class="mt-4 text-success">Currently Learning</h3>
+        <p>
+          I'm currently expanding my skills in backend development by learning technologies such as <b>Node.js</b>, <b>MongoDB</b>, <b>Express.js</b>, and <b>Nest.js</b>.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include('./partials/footer.ejs') %>

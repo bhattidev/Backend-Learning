@@ -1,0 +1,107 @@
+
+<%- include('./partials/header.ejs') %>
+
+<div class="container-fluid bg-dark text-white">
+  <div class="row">
+    <!-- Sidebar -->
+    <div class="col-12 col-md-3 col-lg-2 sidebar">
+      <%- include('./partials/sidebar.ejs', { page_name: 'home' }) %>
+    </div>
+    <!-- Main Content -->
+    <div class="col-12 col-md-9 col-lg-10">
+      <div class="mt-5 text-center">
+        <!-- Profile Picture -->
+        <img 
+          src="/images/update.jpg" 
+          alt="Profile Picture of Muhammad Imran" 
+          class="img-thumbnail shadow-lg rounded-circle mb-3" 
+          style="width: 200px; height: 200px;" 
+        />
+
+        <!-- Introduction -->
+        <h1 class="fw-bold">Welcome to My Portfolio!</h1>
+        <p class="lead px-3 mx-auto" style="max-width: 800px; font-size: 1rem; line-height: 1.6;">
+          Hi there! I am <span class="text-warning">Muhammad Imran</span>, a passionate and detail-oriented <b>Frontend Developer</b>. With a strong foundation in modern web technologies like <b>React.js</b>, <b>Tailwind CSS</b>, and <b>JavaScript</b>, I aim to create engaging, responsive, and user-friendly web applications.
+        </p>
+
+        <!-- Call to Action -->
+        <div class="my-4">
+          <a href="/about" class="btn btn-outline-info mx-2 px-3 py-2">Learn More About Me</a>
+          <a href="/portfolio" class="btn btn-outline-warning mx-2 px-3 py-2">View My Work</a>
+        </div>
+
+        <!-- Key Highlights Section -->
+        <div class="text-center mt-5">
+          <h2 class="text-info">Why Choose Me?</h2>
+          <div class="row justify-content-center mt-4 gx-3">
+            <div class="col-12 col-md-4">
+              <div class="card bg-dark text-white border-info shadow-lg mb-3">
+                <div class="card-body">
+                  <h5 class="card-title text-warning">Modern Technologies</h5>
+                  <p class="card-text">
+                    Skilled in the latest tools and frameworks like <b>React.js</b>, <b>Tailwind CSS</b>, and <b>Redux</b>.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-4">
+              <div class="card bg-dark text-white border-info shadow-lg mb-3">
+                <div class="card-body">
+                  <h5 class="card-title text-warning">Responsive Design</h5>
+                  <p class="card-text">
+                    Ensuring seamless experiences across all devices and screen sizes.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-4">
+              <div class="card bg-dark text-white border-info shadow-lg mb-3">
+                <div class="card-body">
+                  <h5 class="card-title text-warning">Client-Centric Approach</h5>
+                  <p class="card-text">
+                    Delivering tailored solutions to meet your unique business needs.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonials Section -->
+        <div class="text-center mt-5">
+          <h2 class="text-info">What Clients Say</h2>
+          <div class="row justify-content-center mt-4 gx-3">
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card bg-dark text-white border-warning shadow-lg mb-3">
+                <div class="card-body">
+                  <p class="card-text">
+                    "Muhammad's attention to detail and ability to deliver on time exceeded our expectations!"
+                  </p>
+                  <p class="text-warning fw-bold">- John Doe, Business Owner</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card bg-dark text-white border-warning shadow-lg mb-3">
+                <div class="card-body">
+                  <p class="card-text">
+                    "His designs are both functional and aesthetically pleasing. Highly recommend!"
+                  </p>
+                  <p class="text-warning fw-bold">- Sarah Ahmed, Entrepreneur</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer Call-to-Action -->
+        <div class="text-center mt-5">
+          <p class="text-muted">Looking to bring your ideas to life?</p>
+          <a href="/contact" class="btn btn-lg btn-success px-4 py-2">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include('./partials/footer.ejs') %>

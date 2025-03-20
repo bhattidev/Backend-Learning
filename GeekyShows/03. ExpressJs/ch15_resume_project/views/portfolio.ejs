@@ -1,0 +1,74 @@
+<%- include('./partials/header.ejs') %>
+
+<div class="container-fluid bg-dark text-white">
+  <div class="row">
+    <!-- Sidebar -->
+    <div class="col-12 col-md-3 col-lg-2 sidebar">
+      <%- include('./partials/sidebar.ejs', { page_name: 'portfolio' }) %>
+    </div>
+    <!-- Main Content -->
+    <div class="col-12 col-md-9 col-lg-10 px-5 mt-5">
+      <h1 class="text-warning text-center">My Portfolio</h1>
+      <p class="lead text-center mb-4">
+        Explore some of the projects I have worked on. Each project showcases my skills in web development and design.
+      </p>
+
+      <div class="row mt-4">
+        <!-- Project 1 -->
+        <div class="col-12 col-md-6 col-lg-4 mb-3">
+          <div class="card bg-dark text-white shadow-lg">
+            <img src="/images/project1.jpg" class="card-img-top" alt="E-commerce Website">
+            <div class="card-body">
+              <h5 class="card-title text-info">E-commerce Website</h5>
+              <p class="card-text">
+                Built a responsive e-commerce platform with HTML, CSS, and JavaScript. Features include product listings, a shopping cart, and checkout.
+              </p>
+              <a href="https://example.com/project1" class="btn btn-outline-info" target="_blank">View Project</a>
+            </div>
+          </div>
+        </div>
+        <!-- Project 2 -->
+        <div class="col-12 col-md-6 col-lg-4 mb-3">
+          <div class="card bg-dark text-white shadow-lg">
+            <img src="/images/project2.jpg" class="card-img-top" alt="Restaurant Website">
+            <div class="card-body">
+              <h5 class="card-title text-info">Restaurant Website</h5>
+              <p class="card-text">
+                Developed a modern restaurant website using React.js and Tailwind CSS, featuring dynamic menu displays and an online reservation system.
+              </p>
+              <a href="https://example.com/project2" class="btn btn-outline-info" target="_blank">View Project</a>
+            </div>
+          </div>
+        </div>
+        <!-- Project 3 -->
+        <div class="col-12 col-md-6 col-lg-4 mb-3">
+          <div class="card bg-dark text-white shadow-lg">
+            <img src="/images/project3.jpg" class="card-img-top" alt="Portfolio Website">
+            <div class="card-body">
+              <h5 class="card-title text-info">Portfolio Website</h5>
+              <p class="card-text">
+                A personal portfolio website designed using React.js and Tailwind CSS, showcasing my skills, services, and projects.
+              </p>
+              <a href="https://example.com/project3" class="btn btn-outline-info" target="_blank">View Project</a>
+            </div>
+          </div>
+        </div>
+        <!-- Project 4 -->
+        <div class="col-12 col-md-6 col-lg-4 mb-3">
+          <div class="card bg-dark text-white shadow-lg">
+            <img src="/images/project4.jpg" class="card-img-top" alt="Blog Website">
+            <div class="card-body">
+              <h5 class="card-title text-info">Blog Website</h5>
+              <p class="card-text">
+                Developed a blog website with dynamic content management, built with Node.js and MongoDB for backend functionality.
+              </p>
+              <a href="https://example.com/project4" class="btn btn-outline-info" target="_blank">View Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include('./partials/footer.ejs') %>

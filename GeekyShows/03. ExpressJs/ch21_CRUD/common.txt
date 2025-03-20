@@ -1,0 +1,34 @@
+// Server.js
+
+import express from 'express';
+import connectDB from './db/connectdb.js';
+const app = express();
+const port = process.env.PORT || '3000';
+const DATABASE_URL =
+	process.env.DATABASE_URL || 'mongodb://127.0.0.1:27017/schooldb';
+// Database Connection
+connectDB(DATABASE_URL);
+
+app.listen(port, () => {
+	console.log(`Server listening at http://localhost:${port}`);
+});
+
+
+// Connect DB
+
+import mongoose from 'mongoose';
+
+const connectDB = async (DATABASE_URL) => {
+	try {
+		const DB_OPTIONS = {
+			dbName: 'schooldb', // Correct option for specifying database name
+		};
+		await mongoose.connect(DATABASE_URL, DB_OPTIONS);
+		console.log('Connected Successfully to MongoDB...');
+	} catch (err) {
+		console.error('Database Connection Error:', err.message);
+		process.exit(1); // Exit the process if the database connection fails
+	}
+};
+
+export default connectDB;

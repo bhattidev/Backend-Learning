@@ -1,0 +1,160 @@
+html,
+body {
+	height: 100%;
+	margin: 0;
+	font-family: 'Arial', sans-serif;
+}
+
+.container-fluid {
+	min-height: 100%;
+}
+
+.i-color {
+	color: chartreuse;
+}
+
+.ss-color {
+	color: silver;
+}
+
+.font-st {
+	font-family: 'Satisfy', serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.nav-link {
+	color: white;
+	font-weight: normal;
+}
+
+a.nav-link.active {
+	color: black;
+	font-weight: bold;
+	background-color: #ffc107; /* Highlight color */
+}
+
+a.nav-link:hover {
+	color: black;
+	background-color: #e9cd79;
+}
+
+.sidebar {
+	position: -webkit-sticky; /* For Safari */
+	position: sticky;
+	top: 0;
+	height: 100vh;
+	overflow-y: auto;
+	padding-top: 1rem;
+	background-color: #343a40; /* Slight background color for sidebar */
+}
+
+.sidebar img {
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+.sidebar h3 {
+	color: white;
+	margin-top: 1rem;
+}
+
+.navbar-toggler {
+	border: none;
+}
+
+.navbar-toggler-icon {
+	background-color: #ffc107;
+}
+
+/* Sidebar on small screens */
+@media (max-width: 767px) {
+	.sidebar {
+		position: absolute;
+		top: 0;
+		left: -100%;
+		transition: left 0.3s ease;
+		z-index: 1000;
+	}
+
+	.sidebar.active {
+		left: 0;
+	}
+
+	.nav-link {
+		text-align: left;
+	}
+
+	.navbar-toggler {
+		display: block;
+	}
+}
+
+/* Profile Picture and Main Content */
+.img-thumbnail {
+	border-radius: 50%;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2,
+h3 {
+	margin: 1rem 0;
+	font-weight: 600;
+}
+
+h2.text-info {
+	color: #17a2b8;
+}
+
+.card {
+	background-color: #343a40;
+	border: 1px solid #495057;
+}
+
+.card-title {
+	color: #ffc107;
+}
+
+.card-body {
+	padding: 1.5rem;
+}
+
+.card-text {
+	color: #adb5bd;
+}
+
+.btn-outline-info,
+.btn-outline-warning,
+.btn-lg {
+	margin-top: 10px;
+}
+
+.btn:hover {
+	opacity: 0.9;
+}
+
+@media (max-width: 992px) {
+	.container-fluid {
+		padding: 0 15px;
+	}
+
+	.row {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.sidebar {
+		padding-top: 1rem;
+	}
+}
+
+/* Footer Styling */
+footer {
+	background-color: #343a40;
+	padding: 2rem 0;
+	text-align: center;
+	color: white;
+}

@@ -1,0 +1,107 @@
+<!-- Sidebar -->
+<div class="border-end border-warning h-100 sidebar">
+	<!-- Profile Picture and Name -->
+	<div class="text-center">
+		<img
+			src="/images/update.jpg"
+			alt="Profile picture of Muhammad Imran"
+			class="img-fluid rounded-circle mt-5"
+			width="120" />
+		<h3 class="text-white mt-3 font-st">Muhammad Imran</h3>
+	</div>
+
+	<!-- Navigation -->
+	<nav class="nav flex-column text-center mt-4">
+		<a
+			href="/"
+			class="nav-link <%= page_name === 'home' ? 'active' : '' %>"
+			>Home</a
+		>
+		<a
+			href="/services"
+			class="nav-link <%= page_name === 'services' ? 'active' : '' %>"
+			>Services</a
+		>
+		<a
+			href="/skill"
+			class="nav-link <%= page_name === 'skill' ? 'active' : '' %>"
+			>Skills</a
+		>
+		<a
+			href="/portfolio"
+			class="nav-link <%= page_name === 'portfolio' ? 'active' : '' %>"
+			>Portfolio</a
+		>
+		<a
+			href="/contact"
+			class="nav-link <%= page_name === 'contact' ? 'active' : '' %>"
+			>Contact</a
+		>
+		<a
+			href="/about"
+			class="nav-link <%= page_name === 'about' ? 'active' : '' %>"
+			>About</a
+		>
+	</nav>
+</div>
+
+<!-- For Small Screens: Collapsible Hamburger Menu -->
+<!-- Optional: Toggle button for the collapsible sidebar -->
+<button
+	class="navbar-toggler d-md-none"
+	type="button"
+	data-bs-toggle="collapse"
+	data-bs-target="#sidebarMenu"
+	aria-controls="sidebarMenu"
+	aria-expanded="false"
+	aria-label="Toggle navigation">
+	<span class="navbar-toggler-icon"></span>
+</button>
+
+<!-- Sidebar Menu (collapsing behavior for small screens) -->
+<div
+	class="collapse d-md-none"
+	id="sidebarMenu">
+	<div class="border-end border-warning h-100 sidebar">
+		<div class="text-center">
+			<img
+				src="/images/update.jpg"
+				alt="Profile picture of Muhammad Imran"
+				class="img-fluid rounded-circle mt-5"
+				width="120" />
+			<h3 class="text-white mt-3 font-st">Muhammad Imran</h3>
+		</div>
+		<nav class="nav flex-column text-center mt-4">
+			<a
+				href="/"
+				class="nav-link <%= page_name === 'home' ? 'active' : '' %>"
+				>Home</a
+			>
+			<a
+				href="/services"
+				class="nav-link <%= page_name === 'services' ? 'active' : '' %>"
+				>Services</a
+			>
+			<a
+				href="/skill"
+				class="nav-link <%= page_name === 'skill' ? 'active' : '' %>"
+				>Skills</a
+			>
+			<a
+				href="/portfolio"
+				class="nav-link <%= page_name === 'portfolio' ? 'active' : '' %>"
+				>Portfolio</a
+			>
+			<a
+				href="/contact"
+				class="nav-link <%= page_name === 'contact' ? 'active' : '' %>"
+				>Contact</a
+			>
+			<a
+				href="/about"
+				class="nav-link <%= page_name === 'about' ? 'active' : '' %>"
+				>About</a
+			>
+		</nav>
+	</div>
+</div>

@@ -1,0 +1,112 @@
+<%- include('./partials/header.ejs') %>
+
+<div class="container-fluid bg-dark text-white">
+  <div class="row">
+    <!-- Sidebar -->
+    <div class="col-12 col-md-3 col-lg-2 sidebar">
+      <%- include('./partials/sidebar.ejs', { page_name: 'services' }) %>
+    </div>
+    <!-- Main Content -->
+    <div class="col-12 col-md-9 col-lg-10 px-5 mt-5">
+      <h1 class="text-info">My Services</h1>
+      <p class="lead">
+        I provide a range of professional web development services to help businesses succeed in the digital world. From designing stunning responsive websites to developing dynamic user interfaces, I ensure every project is tailored to your unique needs.
+      </p>
+      
+      <div class="row mt-4">
+        <!-- Service 1 -->
+        <div class="col-md-4 mb-3">
+          <div class="card bg-dark text-white shadow-lg border border-info">
+            <div class="card-body">
+              <h5 class="card-title text-warning">Responsive Web Design</h5>
+              <p class="card-text">
+                I specialize in creating mobile-first, fully responsive websites that deliver seamless experiences across all devices.
+              </p>
+              <ul class="list-unstyled">
+                <li>✔ Mobile-first design</li>
+                <li>✔ Cross-browser compatibility</li>
+                <li>✔ Intuitive user experience</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Service 2 -->
+        <div class="col-md-4 mb-3">
+          <div class="card bg-dark text-white shadow-lg border border-info">
+            <div class="card-body">
+              <h5 class="card-title text-warning">Frontend Development</h5>
+              <p class="card-text">
+                Using cutting-edge technologies like React.js, Tailwind CSS, and JavaScript to build interactive and functional user interfaces.
+              </p>
+              <ul class="list-unstyled">
+                <li>✔ Modern frameworks</li>
+                <li>✔ Scalable architecture</li>
+                <li>✔ Clean and maintainable code</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Service 3 -->
+        <div class="col-md-4 mb-3">
+          <div class="card bg-dark text-white shadow-lg border border-info">
+            <div class="card-body">
+              <h5 class="card-title text-warning">Custom Web Solutions</h5>
+              <p class="card-text">
+                Delivering tailored web solutions that align with your business goals and help achieve measurable results.
+              </p>
+              <ul class="list-unstyled">
+                <li>✔ Custom development</li>
+                <li>✔ Business-oriented designs</li>
+                <li>✔ Focus on ROI</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-4">
+        <!-- Additional Services -->
+        <div class="col-md-6 mb-3">
+          <div class="card bg-dark text-white shadow-lg border border-info">
+            <div class="card-body">
+              <h5 class="card-title text-warning">E-commerce Development</h5>
+              <p class="card-text">
+                Creating secure, scalable, and user-friendly e-commerce platforms to help you sell your products online.
+              </p>
+              <ul class="list-unstyled">
+                <li>✔ Custom product pages</li>
+                <li>✔ Payment gateway integration</li>
+                <li>✔ Inventory management</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <div class="card bg-dark text-white shadow-lg border border-info">
+            <div class="card-body">
+              <h5 class="card-title text-warning">Website Optimization</h5>
+              <p class="card-text">
+                Improving website speed, SEO, and performance to ensure an excellent user experience and higher search rankings.
+              </p>
+              <ul class="list-unstyled">
+                <li>✔ Speed optimization</li>
+                <li>✔ SEO best practices</li>
+                <li>✔ Reduced bounce rates</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-5">
+        <a href="/contact" class="btn btn-outline-success px-4 py-2">Get Started</a>
+        <a href="/portfolio" class="btn btn-outline-warning px-4 py-2">View Portfolio</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include('./partials/footer.ejs') %>
