@@ -30,14 +30,24 @@ app.get("/add-contact", (req, res) => {
   res.render("add-contact.ejs");
 });
 
-app.post("/add-contact/", (req, res) => {});
-
-app.get("/update-contact/:id", (req, res) => {
-  res.render("update-contact.ejs");
+app.post("/add-contact/", async (req, res) => {
+  const contact = await Contact.create(req.body);
+  res.redirect("/");
 });
-app.post("/update-contact", (req, res) => {});
 
-app.get("/delet-contact/:id", (req, res) => {});
+app.get("/update-contact/:id", async (req, res) => {
+  const contact = await Contact.findById(req.params.id);
+  res.render("update-contact.ejs", { contact });
+});
+app.post("/update-contact/:id", async (req, res) => {
+  await Contact.findByIdAndUpdate(req.params.id, req.body);
+  res.redirect("/");
+});
+
+app.get("/delete-contact/:id", async (req, res) => {
+  await Contact.findByIdAndDelete(req.params.id);
+  res.redirect("/");
+});
 
 app.listen(port, () => {
   console.log(`Server successfully running on http://localhost:${port}`);
