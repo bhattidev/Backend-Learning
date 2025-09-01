@@ -1,34 +1,102 @@
 import Contact from "../models/contacts.models.js";
+import mongoose from "mongoose";
 
 export const getContacts = async (req, res) => {
-  const contacts = await Contact.find();
-  res.render("home.ejs", { contacts });
+  try {
+    const { page = 1, limit = 5 } = req.query;
+    const options = {
+      page: parseInt(page),
+      limit: parseInt(limit),
+    };
+    const result = await Contact.paginate({}, options);
+
+    res.render("home.ejs", {
+      totalDocs: result.totalDocs,
+      limit: result.limit,
+      totalPages: result.totalPages,
+      currentPage: result.page,
+      counter: result.pagingCounter,
+      hasPrevPage: result.hasPrevPage,
+      hasNextPage: result.hasNextPage,
+      prevPage: result.prevPage,
+      nextPage: result.nextPage,
+      contacts: result.docs,
+    });
+  } catch (error) {
+    res.render("500.ejs", { message: error });
+  }
 };
 
 export const getContact = async (req, res) => {
-  const contact = await Contact.findById(req.params.id);
-  res.render("show-contact.ejs", { contact });
+  if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
+    res.render("404.ejs", { message: "Invalid Id" });
+  }
+
+  try {
+    const contact = await Contact.findById(req.params.id);
+    if (!contact)
+      return res.render("404.ejs", { message: "Contact Not Found." });
+    res.render("show-contact.ejs", { contact });
+  } catch (error) {
+    res.render("500.ejs", { message: error });
+  }
 };
 
 export const addContactPage = async (req, res) => {
   res.render("add-contact.ejs");
 };
 export const addContact = async (req, res) => {
-  const contact = await Contact.create(req.body);
-  res.redirect("/");
+  try {
+    const contact = await Contact.create(req.body);
+    if (!contact)
+      return res.render("404.ejs", { message: "Contact Not Found." });
+    res.redirect("/");
+  } catch (error) {
+    res.render("500.ejs", { message: error });
+  }
 };
 
 export const updateContactPage = async (req, res) => {
-  const contact = await Contact.findById(req.params.id);
-  res.render("update-contact.ejs", { contact });
+  if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
+    res.render("404.ejs", { message: "Invalid Id" });
+  }
+  try {
+    const contact = await Contact.findById(req.params.id);
+    if (!contact)
+      return res.render("404.ejs", { message: "Contact Not Found." });
+    res.render("update-contact.ejs", { contact });
+  } catch (error) {
+    res.render("500.ejs", { message: error });
+  }
 };
 
 export const updateContact = async (req, res) => {
-  await Contact.findByIdAndUpdate(req.params.id, req.body);
-  res.redirect("/");
+  if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
+    res.render("404.ejs", { message: "Invalid Id" });
+  }
+  try {
+    const contact = await await Contact.findByIdAndUpdate(
+      req.params.id,
+      req.body
+    );
+    if (!contact)
+      return res.render("404.ejs", { message: "Contact Not Found." });
+    res.redirect("/");
+  } catch (error) {
+    res.render("500.ejs", { message: error });
+  }
 };
 
 export const deleteContact = async (req, res) => {
-  await Contact.findByIdAndDelete(req.params.id);
-  res.redirect("/");
+  if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
+    res.render("404.ejs", { message: "Invalid Id" });
+  }
+  try {
+    const contact = await Contact.findByIdAndDelete(req.params.id);
+    if (!contact)
+      return res.render("404.ejs", { message: "Contact Not Found." });
+    res.redirect("/");
+  } catch (error) {
+    res.render("500.ejs", { message: error });
+  }
 };

@@ -28,10 +28,10 @@
                 </tr>
               </thead>
               <tbody>
-                <% contacts.map((contact, index) =>{%>
+                <% var srno= counter; contacts.forEach(contact=>{%>
 
                 <tr>
-                  <td><%= index+1 %></td>
+                  <td><%= srno++ %></td>
                   <td><%= contact.first_name %></td>
                   <td><%= contact.last_name %></td>
                   <td><%= contact.email %></td>
@@ -60,6 +60,29 @@
                 <% }) %>
               </tbody>
             </table>
+
+            <nav>
+              <ul class="pagination justify-content-center">
+                <% let disabledClass = hasPrevPage ? '' : 'disabled'%>
+                <li class="page-item <%=disabledClass%>">
+                  <a
+                    class="page-link"
+                    href="/?page=<%=prevPage %>"
+                    tabindex="-1"
+                    aria-disabled="true"
+                    >Previous</a
+                  >
+                </li>
+                <% for(let i=1; i<=totalPages; i++){ %>
+                <li class="page-item <%= currentPage == i ? 'active': '' %>">
+                  <a class="page-link" href="/?page=<%=i %>"><%=i %></a>
+                </li>
+                <% } %> <% let disabledClass2 = hasNextPage ? '' : 'disabled' %>
+                <li class="page-item <%=disabledClass2%>">
+                  <a class="page-link" href="/?page=<%=nextPage %>">Next</a>
+                </li>
+              </ul>
+            </nav>
           </div>
         </div>
       </div>
