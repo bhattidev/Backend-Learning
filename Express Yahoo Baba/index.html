@@ -55,6 +55,35 @@
       <ul class="pagination" id="pagination"></ul>
     </nav>
 
+    <!-- View student Model  -->
+    <div class="modal fade" id="viewStudentModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Student Details</h5>
+            <button
+              class="btn-close"
+              type="button"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-boday">
+            <img
+              src=""
+              alt=""
+              id="viewProfilePic"
+              class="rounded mb-3"
+              width="100"
+            />
+            <p><strong>Name:</strong><span id="viewName"></span></p>
+            <p><strong>Email:</strong><span id="viewEmail"></span></p>
+            <p><strong>Phone:</strong><span id="viewPhone"></span></p>
+            <p><strong>Gender:</strong><span id="viewGender"></span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Add Student Modal  -->
     <div class="modal fade" id="viewStudentModal" tabindex="-1">
       <div class="modal-dialog modal-dialog-centered">
@@ -184,6 +213,12 @@
         }
       }
       fetchStudents();
+
+      // View Single Student Record
+      async function viewStudent(id) {
+        const res = await fetch(`${apiUrl}/${id}`);
+        const data = await res.json();
+      }
     </script>
   </body>
 </html>
